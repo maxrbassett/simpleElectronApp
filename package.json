@@ -1,14 +1,14 @@
 {
   "name": "millerfabfieldinvoicerwebpack",
   "productName": "millerfabfieldinvoicerwebpack",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "My Electron application description",
   "main": ".webpack/main",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "builder-build": "electron-builder build --publish always",
+    "builder-build": "electron-builder build",
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\""
   },
