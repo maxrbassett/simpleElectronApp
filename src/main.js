@@ -1,5 +1,5 @@
 require('update-electron-app')({
-  repo: 'maxrbassett/simpleElectronApp'
+  repo: 'https://github.com/maxrbassett/simpleElectronApp/'
 });
 const { app, BrowserWindow } = require('electron');
 
