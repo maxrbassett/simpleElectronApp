@@ -2,6 +2,8 @@ require('update-electron-app')({
   repo: 'https://github.com/maxrbassett/simpleElectronApp/'
 });
 const { app, BrowserWindow } = require('electron');
+const { autoUpdater } = require("electron-updater")
+
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
@@ -13,6 +15,7 @@ if (require('electron-squirrel-startup')) { // eslint-disable-line global-requir
 let mainWindow;
 
 const createWindow = () => {
+  autoUpdater.checkForUpdatesAndNotify()
   // Create the browser window.
   mainWindow = new BrowserWindow({
     icon: "./src/miller-fab-icon.ico",
