@@ -1,26 +1,31 @@
 {
   "name": "millerfabfieldinvoicerwebpack",
   "productName": "millerfabfieldinvoicerwebpack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "My Electron application description",
   "main": ".webpack/main",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "builder-build": "electron-builder build",
+    "builder-build": "electron-builder build --publish always",
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\""
   },
   "build": {
     "appId": "miller-fab-invoicer",
     "win": {
+      "publish": ["github"],
       "icon": "./src/miller-fab-icon.ico"
     }
   },
   "keywords": [],
   "author": "Max",
   "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/maxrbassett/simpleElectronApp.git"
+  },
   "config": {
     "forge": {
       "packagerConfig": {
